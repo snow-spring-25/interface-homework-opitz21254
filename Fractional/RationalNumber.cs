@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Fractional
+﻿namespace Fractional
 {
     public class RationalNumber
     {
@@ -26,7 +20,7 @@ namespace Fractional
             return numerator + "/" + denominator;
         }
 
-        // (from Adam Fall 2020) 
+        // (from Adam Fall 2020)
         static int GreatestCommonDenominator(int a, int b)
         {
             if (b == 0)
@@ -36,6 +30,22 @@ namespace Fractional
             else
             {
                 return GreatestCommonDenominator(b, a % b);
+            }
+        }
+
+        public interface IEquatable<RationalNumber>
+        {
+            public bool Equals(RationalNumber? other)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public interface IComparable<RationalNumber>
+        {
+            public int CompareTo(RationalNumber? other)
+            {
+                throw new NotImplementedException();
             }
         }
     }
