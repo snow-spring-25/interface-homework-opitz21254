@@ -1,6 +1,6 @@
 ﻿namespace Fractional
 {
-    public class RationalNumber
+    public class RationalNumber : IEquatable<RationalNumber>, IComparable<RationalNumber>
     {
         int numerator;
         int denominator;
@@ -35,18 +35,12 @@
 
         public interface IEquatable<RationalNumber>
         {
-            public bool Equals(RationalNumber? other)
-            {
-                throw new NotImplementedException();
-            }
+            public bool Equals(RationalNumber? other) { }
         }
 
         public interface IComparable<RationalNumber>
         {
-            public int CompareTo(RationalNumber? other)
-            {
-                throw new NotImplementedException();
-            }
+            public int CompareTo(RationalNumber? other) { }
         }
     }
 }
